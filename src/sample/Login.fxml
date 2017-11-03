@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="10" vgap="10"
+          fx:controller="sample.LoginController" stylesheets="@Viper.css">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <children>
+
+        <Label  text="Username:" GridPane.columnIndex="0"
+                GridPane.rowIndex="0" GridPane.halignment="RIGHT" />
+        <Label  text="Password:" GridPane.columnIndex="0"
+                GridPane.rowIndex="1" GridPane.halignment="RIGHT" />
+        <Label  text="Database connection status:" GridPane.columnIndex="0"
+                GridPane.rowIndex="2" GridPane.halignment="RIGHT" />
+        <Label  fx:id="labelDBStatus" text="..." GridPane.columnIndex="1"
+                GridPane.rowIndex="2" GridPane.halignment="RIGHT" />
+
+        <TextField fx:id="userIdField" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   promptText="User ID" styleClass="text-field"/>
+
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                       promptText="Password" styleClass="text-field"/>
+
+        <HBox GridPane.columnIndex="0" GridPane.rowIndex="3"
+              GridPane.columnSpan="2" alignment="CENTER" spacing="10">
+            <children>
+                <Button fx:id="btnLogin" text="Login"/>
+                <Button text="Cancel"/>
+                <Button text="Register"/>
+            </children>
+        </HBox>
+
+    </children>
+
+</GridPane>
